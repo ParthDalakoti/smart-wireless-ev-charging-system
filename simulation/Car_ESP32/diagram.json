@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "author": "EV Wireless Charging Prototype",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -10,
+      "left": -20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602-i2c",
+      "id": "lcd",
+      "top": 95,
+      "left": -150,
+      "attrs": {
+        "address": "0x27"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 125,
+      "left": 75,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "front",
+      "top": 35,
+      "left": 190,
+      "attrs": {
+        "color": "white",
+        "label": "FRONT"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "back",
+      "top": 85,
+      "left": 190,
+      "attrs": {
+        "color": "red",
+        "label": "BACK"
+      }
+    },
+    {
+      "type": "wokwi-motor",
+      "id": "mleft",
+      "top": -120,
+      "left": 120,
+      "attrs": {
+        "label": "LEFT MOTOR"
+      }
+    },
+    {
+      "type": "wokwi-motor",
+      "id": "mright",
+      "top": -120,
+      "left": 230,
+      "attrs": {
+        "label": "RIGHT MOTOR"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "rx",
+      "top": 175,
+      "left": -20,
+      "attrs": {
+        "label": "RX COIL VOLTAGE"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "battery",
+      "top": 175,
+      "left": 110,
+      "attrs": {
+        "label": "BATTERY VOLTAGE"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "temp",
+      "top": 175,
+      "left": 240,
+      "attrs": {
+        "label": "TEMPERATURE"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "lcd:VCC",
+      "esp:VIN",
+      "red"
+    ],
+    [
+      "lcd:GND",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "lcd:SDA",
+      "esp:D21",
+      "green"
+    ],
+    [
+      "lcd:SCL",
+      "esp:D22",
+      "green"
+    ],
+    [
+      "buzzer:1",
+      "esp:D25",
+      "green"
+    ],
+    [
+      "buzzer:2",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "front:A",
+      "esp:D4",
+      "green"
+    ],
+    [
+      "front:C",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "back:A",
+      "esp:D2",
+      "green"
+    ],
+    [
+      "back:C",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "rx:VCC",
+      "esp:3V3",
+      "red"
+    ],
+    [
+      "rx:GND",
+      "esp:GND.2",
+      "black"
+    ],
+    [
+      "rx:SIG",
+      "esp:D34",
+      "green"
+    ],
+    [
+      "battery:VCC",
+      "esp:3V3",
+      "red"
+    ],
+    [
+      "battery:GND",
+      "esp:GND.2",
+      "black"
+    ],
+    [
+      "battery:SIG",
+      "esp:D35",
+      "green"
+    ],
+    [
+      "temp:VCC",
+      "esp:3V3",
+      "red"
+    ],
+    [
+      "temp:GND",
+      "esp:GND.2",
+      "black"
+    ],
+    [
+      "temp:SIG",
+      "esp:D33",
+      "green"
+    ]
+  ]
+}

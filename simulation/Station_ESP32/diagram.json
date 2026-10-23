@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "author": "EV Wireless Charging Prototype",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -10,
+      "left": -20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-rc522",
+      "id": "rfid",
+      "top": -120,
+      "left": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": -115,
+      "left": 80,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602-i2c",
+      "id": "lcd",
+      "top": 95,
+      "left": -130,
+      "attrs": {
+        "address": "0x27"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 125,
+      "left": 85,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "relay_led",
+      "top": 55,
+      "left": 185,
+      "attrs": {
+        "color": "red",
+        "label": "CHARGING RELAY"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "ir1",
+      "top": -20,
+      "left": 210,
+      "attrs": {
+        "label": "ENTRY IR"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "ir2",
+      "top": 35,
+      "left": 210,
+      "attrs": {
+        "label": "EXIT/PASS IR"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "gas",
+      "top": 170,
+      "left": 45,
+      "attrs": {
+        "label": "MQ2 GAS"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "flame",
+      "top": 170,
+      "left": 190,
+      "attrs": {
+        "label": "FLAME SENSOR"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "rfid:3V3",
+      "esp:3V3",
+      "red"
+    ],
+    [
+      "rfid:GND",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "rfid:SDA",
+      "esp:D5",
+      "green"
+    ],
+    [
+      "rfid:SCK",
+      "esp:D18",
+      "green"
+    ],
+    [
+      "rfid:MOSI",
+      "esp:D23",
+      "green"
+    ],
+    [
+      "rfid:MISO",
+      "esp:D19",
+      "green"
+    ],
+    [
+      "rfid:RST",
+      "esp:D4",
+      "green"
+    ],
+    [
+      "servo:V+",
+      "esp:VIN",
+      "red"
+    ],
+    [
+      "servo:GND",
+      "esp:GND.2",
+      "black"
+    ],
+    [
+      "servo:PWM",
+      "esp:D13",
+      "green"
+    ],
+    [
+      "lcd:VCC",
+      "esp:VIN",
+      "red"
+    ],
+    [
+      "lcd:GND",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "lcd:SDA",
+      "esp:D21",
+      "green"
+    ],
+    [
+      "lcd:SCL",
+      "esp:D22",
+      "green"
+    ],
+    [
+      "buzzer:1",
+      "esp:D25",
+      "green"
+    ],
+    [
+      "buzzer:2",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "relay_led:A",
+      "esp:D26",
+      "green"
+    ],
+    [
+      "relay_led:C",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "ir1:1.l",
+      "esp:D14",
+      "green"
+    ],
+    [
+      "ir1:2.l",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "ir2:1.l",
+      "esp:D27",
+      "green"
+    ],
+    [
+      "ir2:2.l",
+      "esp:GND.1",
+      "black"
+    ],
+    [
+      "gas:VCC",
+      "esp:3V3",
+      "red"
+    ],
+    [
+      "gas:GND",
+      "esp:GND.2",
+      "black"
+    ],
+    [
+      "gas:SIG",
+      "esp:D34",
+      "green"
+    ],
+    [
+      "flame:VCC",
+      "esp:3V3",
+      "red"
+    ],
+    [
+      "flame:GND",
+      "esp:GND.2",
+      "black"
+    ],
+    [
+      "flame:SIG",
+      "esp:D35",
+      "green"
+    ]
+  ]
+}
