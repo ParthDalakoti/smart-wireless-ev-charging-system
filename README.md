@@ -1,5 +1,8 @@
 # Smart Wireless EV Charging System with RFID Authentication & Multi-Sensor Safety Cutoff
 
+
+[![Firmware CI](https://github.com/ParthDalakoti/smart-wireless-ev-charging-system/actions/workflows/firmware-ci.yml/badge.svg)](https://github.com/ParthDalakoti/smart-wireless-ev-charging-system/actions) [![Wokwi Simulation](https://img.shields.io/badge/Simulation-Wokwi_Virtual_Lab-00B4D8.svg?style=for-the-badge&logo=espressif)](https://wokwi.com)
+
 [![Microcontroller](https://img.shields.io/badge/MCU-Dual_ESP32-E7352C.svg?style=for-the-badge&logo=espressif)](https://www.espressif.com/)
 [![Simulation](https://img.shields.io/badge/Simulation-Wokwi_Verified-4CAF50.svg?style=for-the-badge)](https://wokwi.com/)
 [![Protocol](https://img.shields.io/badge/Protocols-SPI_%7C_I2C_%7C_Bluetooth-blue.svg?style=for-the-badge)]()
@@ -113,3 +116,10 @@ graph TD
 *B.Tech in Electronics & Communication Engineering (2023–2027)*  
 *Graphic Era Hill University (GEHU), Bhimtal Campus*  
 *President, Robotics & Automation Club, GEHU*
+
+---
+
+## 📸 Hardware Bench Test Photos
+
+![Hardware Prototype Setup](media/hardware_demo_1.jpg)
+
